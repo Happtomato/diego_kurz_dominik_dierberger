@@ -3,14 +3,11 @@ import json
 import os
 from datetime import datetime
 
-# 🔧 Pfad zur JSON-Datei
 SAVE_FILE = "/data/saved_recipes.json"
 
-# 🔖 Streamlit-Grundkonfiguration
 st.set_page_config(page_title="Gespeicherte Rezepte", layout="wide")
 st.title("📚 Gespeicherte Rezeptvorschläge")
 
-# 📦 Datei laden und validieren
 if not os.path.exists(SAVE_FILE):
     st.warning("Noch keine Rezepte gespeichert.")
     st.stop()
@@ -22,10 +19,8 @@ with open(SAVE_FILE, "r", encoding="utf-8") as f:
         st.error("❌ Fehler beim Lesen der Rezeptdatei.")
         st.stop()
 
-# 🔄 Sortiere nach Zeitstempel (neueste zuerst)
 data.sort(key=lambda x: x["timestamp"], reverse=True)
 
-# 📋 Anzeige aller gespeicherten Rezeptgruppen
 for i, entry in enumerate(data):
     timestamp = datetime.fromisoformat(entry["timestamp"]).strftime("%d.%m.%Y %H:%M")
     ingredient_list = ", ".join(entry["ingredients"])

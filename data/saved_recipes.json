@@ -142,5 +142,70 @@
         ]
       }
     }
+  },
+  {
+    "timestamp": "2025-05-08T08:57:19.746377",
+    "ingredients": [
+      "nutella",
+      "brot",
+      "speck",
+      "ei"
+    ],
+    "recipes": {
+      "recipe1": {
+        "name": "Nutella French Toast mit Speck",
+        "ingredients": [
+          "Nutella",
+          "Brot",
+          "Ei",
+          "Speck",
+          "Butter"
+        ],
+        "instructions": [
+          "Den Speck in einer Pfanne knusprig braten, dann warm halten.",
+          "Nutella großzügig auf eine Seite einer Scheibe Brot streichen.",
+          "Eine zweite Scheibe Brot darauflegen und leicht andrücken.",
+          "Das Ei in einer Schüssel verquirlen.",
+          "Das Nutella-Sandwich in das verquirlte Ei tauchen, sodass beide Seiten gut bedeckt sind.",
+          "Butter in einer Pfanne erhitzen und das Sandwich von beiden Seiten goldbraun und knusprig braten.",
+          "Mit dem gebratenen Speck als Beilage servieren."
+        ]
+      },
+      "recipe2": {
+        "name": "Speck-Ei-Brot Sandwich",
+        "ingredients": [
+          "Brot",
+          "Ei",
+          "Speck",
+          "Butter"
+        ],
+        "instructions": [
+          "Speck in einer Pfanne knusprig braten, dann beiseite legen.",
+          "In derselben Pfanne ein Ei als Spiegelei braten.",
+          "Zwei Scheiben Brot in der Pfanne anrösten, bei Bedarf etwas Butter hinzufügen.",
+          "Auf einer Scheibe Brot das Spiegelei und den Speck platzieren.",
+          "Mit der anderen Brotscheibe abdecken.",
+          "Das Sandwich diagonal halbieren und warm servieren."
+        ]
+      },
+      "recipe3": {
+        "name": "Nutella Frühstückswrap mit Speck und Ei",
+        "ingredients": [
+          "Nutella",
+          "Brot",
+          "Ei",
+          "Speck"
+        ],
+        "instructions": [
+          "Speck knusprig braten und aus der Pfanne nehmen.",
+          "Ein Ei in der Pfanne braten, bis es gut durch ist.",
+          "Eine Scheibe Brot flach ausrollen, um dünn einen Wrap zu simulieren.",
+          "Nutella auf das Brot streichen.",
+          "Ei und Speck auf die Nutella-Schicht legen.",
+          "Das Brot vorsichtig aufrollen oder falten.",
+          "In der Mitte halbieren und servieren."
+        ]
+      }
+    }
   }
 ]

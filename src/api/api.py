@@ -6,16 +6,13 @@ import os
 import time
 import logging
 
-# Load environment variables
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 RECIPE_ASSISTANT_ID = os.getenv("RECIPE_ASSISTANT_ID")
 CONNECTAPIKEY = os.getenv("CONNECT_API_KEY")
-# App setup
 app = Flask(__name__)
 CORS(app)
 
-# Logging setup
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 
@@ -36,7 +33,6 @@ def run_assistant_thread(message: str, assistant_id: str) -> str:
     )
     logging.info(f"🚀 Run started: {run.id}")
 
-    # Poll for completion
     while True:
         run_status = openai.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
         if run_status.status == "completed":

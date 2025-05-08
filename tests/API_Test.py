@@ -16,7 +16,7 @@ def test_suggest_valid_input():
 
 
 def test_suggest_invalid_input():
-    payload = {"ingredients": ""}  # Ungültig: kein Listentyp
+    payload = {"ingredients": ""}
     response = requests.post(API_URL, json=payload)
 
     assert response.status_code == 400
@@ -25,7 +25,7 @@ def test_suggest_invalid_input():
 
 
 def test_suggest_missing_field():
-    response = requests.post(API_URL, json={})  # Zutaten fehlen
+    response = requests.post(API_URL, json={})
     assert response.status_code == 400
     result = response.json()
     assert "error" in result

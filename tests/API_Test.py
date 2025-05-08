@@ -1,7 +1,8 @@
 import requests
 import json
 
-API_URL = "http://localhost:5000/suggest"
+API_URL = "http://localhost:5050/suggest"
+
 
 def test_suggest_valid_input():
     payload = {"ingredients": ["tomaten", "eier", "käse"]}
@@ -13,6 +14,7 @@ def test_suggest_valid_input():
     assert isinstance(result["rezepte"], str)
     assert len(result["rezepte"]) > 0
 
+
 def test_suggest_invalid_input():
     payload = {"ingredients": ""}  # Ungültig: kein Listentyp
     response = requests.post(API_URL, json=payload)
@@ -20,6 +22,7 @@ def test_suggest_invalid_input():
     assert response.status_code == 400
     result = response.json()
     assert "error" in result
+
 
 def test_suggest_missing_field():
     response = requests.post(API_URL, json={})  # Zutaten fehlen

@@ -3,11 +3,14 @@ import json
 import os
 from datetime import datetime
 
-SAVE_FILE = "saved_recipes.json"
+# 🔧 Pfad zur JSON-Datei
+SAVE_FILE = "/data/saved_recipes.json"
 
+# 🔖 Streamlit-Grundkonfiguration
 st.set_page_config(page_title="Gespeicherte Rezepte", layout="wide")
 st.title("📚 Gespeicherte Rezeptvorschläge")
 
+# 📦 Datei laden und validieren
 if not os.path.exists(SAVE_FILE):
     st.warning("Noch keine Rezepte gespeichert.")
     st.stop()
@@ -19,11 +22,24 @@ with open(SAVE_FILE, "r", encoding="utf-8") as f:
         st.error("❌ Fehler beim Lesen der Rezeptdatei.")
         st.stop()
 
-# Sortierung nach Zeit (neueste oben)
+# 🔄 Sortiere nach Zeitstempel (neueste zuerst)
 data.sort(key=lambda x: x["timestamp"], reverse=True)
 
+# 📋 Anzeige aller gespeicherten Rezeptgruppen
 for i, entry in enumerate(data):
     timestamp = datetime.fromisoformat(entry["timestamp"]).strftime("%d.%m.%Y %H:%M")
-    with st.expander(f"📅 {timestamp} – Zutaten: {', '.join(entry['ingredients'])}"):
+    ingredient_list = ", ".join(entry["ingredients"])
+
+    with st.expander(f"📅 {timestamp} – Zutaten: {ingredient_list}"):
         st.subheader("🍽️ Rezeptvorschläge")
-        st.text(entry["recipes"])
+
+        for key, recipe in entry["recipes"].items():
+            st.markdown(f"### 📝 {recipe['name']}")
+            st.markdown(f"**Zutaten:** {', '.join(recipe['ingredients'])}")
+
+            st.markdown("**Anleitung:**")
+            if recipe.get("instructions"):
+                for idx, step in enumerate(recipe["instructions"], start=1):
+                    st.markdown(f"{idx}. {step}")
+            else:
+                st.warning("⚠️ Keine Anleitung vorhanden.")

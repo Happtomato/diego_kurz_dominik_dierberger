@@ -1,0 +1,146 @@
+[
+  {
+    "timestamp": "2025-05-07T10:26:52.762407",
+    "ingredients": [
+      "sahne",
+      "eier",
+      "pasta"
+    ],
+    "recipes": {
+      "recipe1": {
+        "name": "Cremige Eiernudeln",
+        "ingredients": [
+          "Pasta",
+          "Eier",
+          "Sahne",
+          "Salz",
+          "Pfeffer",
+          "Knoblauch",
+          "Parmesan"
+        ],
+        "instructions": [
+          "Die Pasta nach Packungsanweisung in einem Topf mit Salzwasser al dente kochen und abgießen.",
+          "In einer Schüssel die Eier mit der Sahne, Salz, Pfeffer und gehacktem Knoblauch verquirlen.",
+          "Die heiße Pasta zurück in den Topf geben und vom Herd nehmen.",
+          "Die Eier-Sahne-Mischung über die heiße Pasta gießen und gut umrühren, sodass die Eier leicht stocken und eine cremige Sauce entsteht.",
+          "Den geriebenen Parmesan hinzufügen und erneut umrühren.",
+          "Warm servieren und nach Belieben mit frischen Kräutern garnieren."
+        ]
+      },
+      "recipe2": {
+        "name": "Pasta Frittata",
+        "ingredients": [
+          "Pasta",
+          "Eier",
+          "Sahne",
+          "Salz",
+          "Pfeffer",
+          "Olivenöl",
+          "Zwiebel"
+        ],
+        "instructions": [
+          "Die Pasta vom Vortag verwenden oder frisch kochen und abkühlen lassen.",
+          "Die Eier in einer Schüssel mit Sahne, Salz und Pfeffer verquirlen.",
+          "Eine Pfanne mit Olivenöl erhitzen und die gehackte Zwiebel darin anbraten, bis sie glasig ist.",
+          "Die gekochte Pasta in die Pfanne hinzufügen und kurz durchrühren.",
+          "Die Eiermischung darüber gießen und bei mittlerer Hitze stocken lassen.",
+          "Wenn die Ränder fest werden, die Pfanne in den vorgeheizten Ofen schieben und bei 180 Grad Celsius ca. 10 Minuten backen, bis die Frittata komplett gestockt und leicht gebräunt ist.",
+          "Warm oder kalt servieren."
+        ]
+      },
+      "recipe3": {
+        "name": "Sahne-Eierauflauf mit Pasta",
+        "ingredients": [
+          "Pasta",
+          "Eier",
+          "Sahne",
+          "Salz",
+          "Pfeffer",
+          "Muskatnuss",
+          "Butter"
+        ],
+        "instructions": [
+          "Die Pasta al dente kochen und abgießen.",
+          "Den Backofen auf 180 Grad Celsius vorheizen.",
+          "Eine Auflaufform mit Butter ausstreichen.",
+          "In einer Schüssel die Eier mit der Sahne, Salz, Pfeffer und einer Prise Muskatnuss verquirlen.",
+          "Die gekochte Pasta in die vorbereitete Auflaufform geben und die Eier-Sahne-Mischung darüber gießen.",
+          "Eventuell nochmals mit Salz und Pfeffer abschmecken.",
+          "Im Ofen ca. 20-25 Minuten backen, bis die Oberfläche goldbraun ist und der Auflauf durchgestockt ist.",
+          "Heiß servieren."
+        ]
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-07T10:44:21.787215",
+    "ingredients": [
+      "ei",
+      "mayo",
+      "avocado"
+    ],
+    "recipes": {
+      "recipe1": {
+        "name": "Avocado-Ei-Salat",
+        "ingredients": [
+          "Ei",
+          "Mayo",
+          "Avocado",
+          "Salz",
+          "Pfeffer",
+          "Zitrone"
+        ],
+        "instructions": [
+          "Die Eier in einem Topf mit Wasser zum Kochen bringen und etwa 10 Minuten hart kochen. Anschließend abschrecken und die Schale entfernen.",
+          "Die gekochten Eier hacken und in eine Schüssel geben.",
+          "Die Avocado halbieren, den Kern entfernen und das Fruchtfleisch mit einem Löffel herausnehmen.",
+          "Die Avocado mit einer Gabel zerdrücken und zu den gehackten Eiern geben.",
+          "Einen Esslöffel Mayonnaise hinzufügen und gut mischen.",
+          "Mit Salz, Pfeffer und einem Spritzer Zitronensaft abschmecken.",
+          "Den Salat in einer Schale servieren oder auf Brot als Aufstrich genießen."
+        ]
+      },
+      "recipe2": {
+        "name": "Gefüllte Avocado mit Ei",
+        "ingredients": [
+          "Ei",
+          "Avocado",
+          "Mayo",
+          "Salz",
+          "Pfeffer",
+          "Chiliflocken"
+        ],
+        "instructions": [
+          "Den Backofen auf 200 Grad Celsius vorheizen.",
+          "Die Avocado halbieren und den Kern entfernen.",
+          "Etwas Fruchtfleisch um das Loch herum entfernen, damit genügend Platz für ein Ei bleibt.",
+          "Die Avocadohälften auf ein Backblech legen und jeweils ein Ei in die Mitte der Avocado geben.",
+          "Die Avocado mit Salz, Pfeffer und Chiliflocken bestreuen.",
+          "Im vorgeheizten Ofen etwa 10-15 Minuten backen, bis das Eiweiß gestockt ist.",
+          "Mit einem Klecks Mayonnaise servieren und sofort genießen."
+        ]
+      },
+      "recipe3": {
+        "name": "Avocado-Mayo-Ei-Salat-Sandwich",
+        "ingredients": [
+          "Ei",
+          "Avocado",
+          "Mayo",
+          "Vollkornbrot",
+          "Zitrone",
+          "Salz",
+          "Pfeffer"
+        ],
+        "instructions": [
+          "Die Eier in einem Topf hart kochen lassen, etwa 10 Minuten. Dann abkühlen lassen, schälen und in Scheiben schneiden.",
+          "Die Avocado halbieren, den Kern entfernen, das Fruchtfleisch herausschöpfen, in eine Schüssel geben und mit einer Gabel zerdrücken.",
+          "Einen Teelöffel Zitronensaft und einen Esslöffel Mayonnaise zur Avocado geben und gut vermischen.",
+          "Mit Salz und Pfeffer abschmecken.",
+          "Eine Scheibe Vollkornbrot mit der Avocado-Mayonnaise-Mischung bestreichen.",
+          "Eierscheiben darauf verteilen und mit einer weiteren Brotscheibe abdecken.",
+          "Das Sandwich diagonal durchschneiden und servieren."
+        ]
+      }
+    }
+  }
+]

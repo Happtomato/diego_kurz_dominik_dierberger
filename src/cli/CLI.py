@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 API_URL = "http://localhost:5050/suggest"
-SAVE_FILE = "saved_recipes.json"
+SAVE_FILE = "../../data/saved_recipes.json"
 
 def call_recipe_api(ingredients):
     try:
@@ -14,7 +14,7 @@ def call_recipe_api(ingredients):
             data=json.dumps({"ingredients": ingredients})
         )
         if response.status_code == 200:
-            return response.json()["rezepte"]
+            return response.json()
         else:
             print(f"❌ Fehler {response.status_code}: {response.json().get('error')}")
     except Exception as e:

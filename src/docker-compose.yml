@@ -1,18 +1,19 @@
 version: "3.9"
 
 services:
-  #frontend:
-   # build:
-    #  context: ./frontend
-     # dockerfile: Dockerfile
-    #container_name: rezept_frontend
-    #ports:
-    #  - "8501:8501"
-    #volumes:
-    #  - ./frontend:/app
-   # depends_on:
-   #   - backend
-   # command: ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rezept_frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app
+      - ../data:/data
+    depends_on:
+      - backend
+    command: ["streamlit", "run", "frontend.py", "--server.port=8501", "--server.address=0.0.0.0"]
 
   backend:
     build:
@@ -22,7 +23,7 @@ services:
     ports:
       - "5050:5050"
     volumes:
-      - ./api:/app
+      - ../data:/data
     env_file:
       - ./api/.env
     command: ["python", "api.py"]

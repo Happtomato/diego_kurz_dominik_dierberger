@@ -20,7 +20,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 
 
 def run_assistant_thread(message: str, assistant_id: str) -> str:
-    """Run a message through an OpenAI Assistant thread and return the result."""
     thread = openai.beta.threads.create()
     logging.info(f"🧵 Thread created: {thread.id}")
 
@@ -53,7 +52,6 @@ def run_assistant_thread(message: str, assistant_id: str) -> str:
 
 @app.route("/suggest", methods=["POST"])
 def suggest_recipe():
-    """Suggest recipes based on a list of ingredients."""
     try:
         data = request.get_json()
         ingredients = data.get("ingredients", [])
@@ -70,7 +68,7 @@ def suggest_recipe():
 
         response = run_assistant_thread(prompt, RECIPE_ASSISTANT_ID)
         logging.info("✅ Rezeptvorschläge erhalten.")
-        return jsonify({"rezepte": response}), 200
+        return response, 200
 
     except Exception as e:
         logging.error(f"❌ Fehler bei /suggest: {str(e)}")
@@ -83,4 +81,4 @@ def health():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5050, debug=True)

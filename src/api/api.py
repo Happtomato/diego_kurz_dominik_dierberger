@@ -9,7 +9,6 @@ import logging
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 RECIPE_ASSISTANT_ID = os.getenv("RECIPE_ASSISTANT_ID")
-CONNECTAPIKEY = os.getenv("CONNECT_API_KEY")
 app = Flask(__name__)
 CORS(app)
 
@@ -18,20 +17,20 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 
 def run_assistant_thread(message: str, assistant_id: str) -> str:
     thread = openai.beta.threads.create()
-    logging.info(f"🧵 Thread created: {thread.id}")
+    logging.info(f"Thread created: {thread.id}")
 
     openai.beta.threads.messages.create(
         thread_id=thread.id,
         role="user",
         content=message
     )
-    logging.info("💬 Message added to thread.")
+    logging.info("Message added to thread.")
 
     run = openai.beta.threads.runs.create(
         thread_id=thread.id,
         assistant_id=assistant_id
     )
-    logging.info(f"🚀 Run started: {run.id}")
+    logging.info(f"Run started: {run.id}")
 
     while True:
         run_status = openai.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
@@ -39,7 +38,7 @@ def run_assistant_thread(message: str, assistant_id: str) -> str:
             break
         elif run_status.status in ("failed", "cancelled", "expired"):
             raise RuntimeError(f"Run failed with status: {run_status.status}")
-        logging.info(f"⏳ Waiting... Current status: {run_status.status}")
+        logging.info(f"Waiting... Current status: {run_status.status}")
         time.sleep(2)
 
     messages = openai.beta.threads.messages.list(thread_id=thread.id)
@@ -63,11 +62,11 @@ def suggest_recipe():
         )
 
         response = run_assistant_thread(prompt, RECIPE_ASSISTANT_ID)
-        logging.info("✅ Rezeptvorschläge erhalten.")
+        logging.info("Rezeptvorschläge erhalten.")
         return response, 200
 
     except Exception as e:
-        logging.error(f"❌ Fehler bei /suggest: {str(e)}")
+        logging.error(f"Fehler bei /suggest: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 

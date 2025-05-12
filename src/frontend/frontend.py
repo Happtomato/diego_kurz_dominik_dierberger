@@ -28,7 +28,7 @@ for i, entry in enumerate(data):
         st.subheader("Rezeptvorschläge")
 
         for key, recipe in entry["recipes"].items():
-            st.markdown(f"###{recipe['name']}")
+            st.markdown(f"### {recipe['name']}")
             st.markdown(f"**Zutaten:** {', '.join(recipe['ingredients'])}")
 
             st.markdown("**Anleitung:**")

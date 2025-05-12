@@ -1,0 +1,77 @@
+[
+  {
+    "timestamp": "2025-05-12T10:53:56.270732",
+    "ingredients": [
+      "tomaten",
+      "eier",
+      "käse"
+    ],
+    "recipes": {
+      "recipe1": {
+        "name": "Tomaten-Käse Frittata",
+        "ingredients": [
+          "Tomaten",
+          "Eier",
+          "Käse",
+          "Salz",
+          "Pfeffer",
+          "Öl"
+        ],
+        "instructions": [
+          "Den Ofen auf 180 Grad Celsius vorheizen.",
+          "Tomaten in dünne Scheiben schneiden und den Käse reiben.",
+          "Eier in eine große Schüssel schlagen, mit Salz und Pfeffer würzen und gut verquirlen.",
+          "Etwas Öl in eine ofenfeste Pfanne geben und die Tomatenscheiben anordnen.",
+          "Die verquirlten Eier gleichmäßig über die Tomaten in der Pfanne gießen.",
+          "Den geriebenen Käse darüberstreuen.",
+          "Die Pfanne in den vorgeheizten Ofen stellen und ca. 15-20 Minuten backen, bis die Frittata aufgegangen und goldbraun ist.",
+          "Aus dem Ofen nehmen und leicht abkühlen lassen, dann in Stücke schneiden und servieren."
+        ]
+      },
+      "recipe2": {
+        "name": "Tomaten-Käse Wraps",
+        "ingredients": [
+          "Tomaten",
+          "Eier",
+          "Käse",
+          "Salz",
+          "Pfeffer",
+          "Tortilla-Wraps"
+        ],
+        "instructions": [
+          "Die Tortilla-Wraps bereitstellen.",
+          "Tomaten in Scheiben schneiden und Käse reiben.",
+          "Eier in einer Schüssel aufschlagen, salzen und pfeffern und gut verquirlen.",
+          "Eine Pfanne erhitzen und die Eiermasse hineingießen, um ein dünnes Omelett zu machen.",
+          "Das Omelett aus der Pfanne nehmen und in Streifen schneiden.",
+          "Auf jeden Tortilla-Wrap einige Tomatenscheiben, Käsestreusel und Omelettstreifen legen.",
+          "Die Wraps aufrollen und in der heißen Pfanne von beiden Seiten kurz anrösten, bis der Käse schmilzt.",
+          "In der Mitte durchschneiden und servieren."
+        ]
+      },
+      "recipe3": {
+        "name": "Tomaten-Käse Muffins",
+        "ingredients": [
+          "Tomaten",
+          "Eier",
+          "Käse",
+          "Mehl",
+          "Backpulver",
+          "Salz",
+          "Pfeffer",
+          "Öl"
+        ],
+        "instructions": [
+          "Den Ofen auf 180 Grad Celsius vorheizen und ein Muffinblech einfetten.",
+          "Tomaten klein würfeln und Käse reiben.",
+          "In einer Schüssel Mehl, Backpulver, Salz und Pfeffer vermischen.",
+          "In einer anderen Schüssel Eier mit etwas Öl verquirlen.",
+          "Die trockenen Zutaten mit den flüssigen Zutaten vermengen und die Tomatenwürfel und den geriebenen Käse unterheben.",
+          "Den Teig gleichmäßig auf die Muffinförmchen verteilen.",
+          "Im vorgeheizten Ofen ca. 20-25 Minuten backen, bis die Muffins aufgegangen und golden sind.",
+          "Aus dem Ofen nehmen und vor dem Servieren etwas abkühlen lassen."
+        ]
+      }
+    }
+  }
+]

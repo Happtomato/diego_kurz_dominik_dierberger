@@ -1,14 +1,10 @@
 #!/bin/bash
 
-echo "🔧 Starte automatisierte Checks..."
+echo "Starte automatisierte Checks..."
 
-echo "📥 Installiere Python-Abhängigkeiten aus requirements.txt..."
-pip install --quiet -r requirements.txt
+exit_code = pytest.main(["API_Test.py"])
 
-echo "📦 TESTS mit pytest:"
-pytest ../tests/ API_TEST.py
-
-if [ $? -eq 0 ]; then
+if [ $exit_code -eq 0 ]; then
     echo "✅ Alle Checks erfolgreich!"
 else
     echo "❌ Fehler bei Tests oder Linting."
